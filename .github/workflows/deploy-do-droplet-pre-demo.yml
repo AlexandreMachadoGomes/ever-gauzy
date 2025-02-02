@@ -84,7 +84,6 @@ jobs:
           key: ${{secrets.DO_DROPLET_KEY}}
           script: |
             if [ "${{ env.INGRESS_CERT_TYPE }}" = "letsencrypt" ]; then
-                docker-compose -f .deploy/ssh/with-cloudflare/demo/docker-compose.api.demo.cloudflare.pre.yml down
                 docker-compose -f .deploy/ssh/with-letsencrypt/demo/docker-compose.api.demo.letsencrypt.pre.yml up -d
             else
                 echo "Unknown INGRESS_CERT_TYPE: $INGRESS_CERT_TYPE"
