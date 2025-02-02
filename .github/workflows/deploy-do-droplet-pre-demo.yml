@@ -1,4 +1,4 @@
-name: Deploy to DigitalOcean Droplet Demo Pre
+name: Deploy to DigitalOcean Droplet Demo Pre 
 
 on:
   push:
